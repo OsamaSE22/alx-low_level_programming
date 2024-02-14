@@ -1,8 +1,7 @@
 #include <stdio.h>
-
 /**
- * this is main function the entry-point of the C programs
- * this function is important as it's the root where the progam begin to excute
+ *this is main function is the entry-point for the c file
+ *and return 0 this is ti check the correction of the program
  */
 int main(void)
 {
