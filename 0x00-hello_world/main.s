@@ -1,4 +1,4 @@
-	.file	"0-main.c"
+	.file	"main.c"
 	.intel_syntax noprefix
 	.text
 	.section	.rodata
