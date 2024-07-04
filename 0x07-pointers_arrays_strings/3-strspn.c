@@ -2,11 +2,23 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
-	i =0;
-	while (s[i]==accept[i] || s[i] != ',')
+	char *p, *a;
+	unsigned int count = 0;
+
+	for(p = s; *p != '\0'; p++)
 	{
-		i++;
+		for(a = accept; *a != '\0'; a++)
+		{
+			if(*p == *a)
+			{
+				break;
+			}
+		}
+		if(*a == '\0')
+		{
+			return count;
+		}
+		count++;
 	}
-	return i;
+	return count++;
 }
