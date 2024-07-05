@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 char *_strpbrk(char *s, char *accept)
 {
@@ -11,6 +12,10 @@ char *_strpbrk(char *s, char *accept)
 			if(*p == *a)
 			{
 				return p;
+			}
+			else if(*p + 1 == '\0' && *p != *a)
+			{
+				return NULL;
 			}
 		}
 	}
