@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 
 char *_strpbrk(char *s, char *accept)
 {
