@@ -13,11 +13,7 @@ char *_strpbrk(char *s, char *accept)
 			{
 				return p;
 			}
-			else if(*p + 1 == '\0' && *p != *a)
-			{
-				return NULL;
-			}
 		}
 	}
-	return p;
+	return NULL;
 }
