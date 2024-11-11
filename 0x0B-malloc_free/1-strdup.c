@@ -12,15 +12,15 @@ char *_strdup(char *str)
 		return NULL;
 	}
 	
-	for(i = 0; str[i] != '\0'; i++)
-	{
-		ptr2 = malloc((i+1) * sizeof(char));
+	for(i = 0; str[i] != '\0'; i++);
 
-		if (ptr2 == NULL)
+	ptr2 = malloc((i+1) * sizeof(char));
+
+	if (ptr2 == NULL)
 		{
 			return NULL;
 		}
-	}
+
 	for (i2 = 0; str[i2] != '\0'; i2++)
 	{
 		ptr2[i2] = str[i2];
