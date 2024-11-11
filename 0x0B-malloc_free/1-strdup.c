@@ -3,14 +3,27 @@
 
 char *_strdup(char *str)
 {
-	int t = 7;
-	char* ptr;
+	char* ptr2;
 	int i;
-	ptr = malloc(t* sizeof(char));
+	int i2;
+
+	if(str == NULL)
+	{
+		return NULL;
+	}
 	
 	for(i = 0; str[i] != '\0'; i++)
 	{
-		ptr[i] = str[i];
+		ptr2 = malloc((i+1) * sizeof(char));
+
+		if (ptr2 == NULL)
+		{
+			return NULL;
+		}
 	}
-	return ptr;
+	for (i2 = 0; str[i2] != '\0'; i2++)
+	{
+		ptr2[i2] = str[i2];
+	}
+	return ptr2;
 }
