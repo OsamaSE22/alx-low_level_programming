@@ -1,12 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	int i,j;
-	ptr = malloc((strlen(s1) + strlen(s2))* sizeof(char));
+	int i,j,a,b;
+	for(a = 0; s1[a] != '\0'; a++);
+	for (b = 0; s2[b] != '\0'; b++);
+	ptr = malloc((a + b + 1)* sizeof(char));
 	for(i = 0; s1[i] != '\0'; i++)
 	{
 		ptr[i] = s1[i];
