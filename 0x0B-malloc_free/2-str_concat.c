@@ -13,6 +13,10 @@ char *str_concat(char *s1, char *s2)
 	for(a = 0; s1[a] != '\0'; a++);
 	for (b = 0; s2[b] != '\0'; b++);
 	ptr = malloc((a + b + 1)* sizeof(char));
+
+	if(ptr == NULL)
+		return NULL;
+
 	for(i = 0; s1[i] != '\0'; i++)
 	{
 		ptr[i] = s1[i];
