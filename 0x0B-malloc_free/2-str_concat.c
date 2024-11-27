@@ -5,6 +5,8 @@ char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
 	int i,j,a,b;
+	if (s1 == NULL || s2 == NULL)
+		return NULL;
 	for(a = 0; s1[a] != '\0'; a++);
 	for (b = 0; s2[b] != '\0'; b++);
 	ptr = malloc((a + b + 1)* sizeof(char));
