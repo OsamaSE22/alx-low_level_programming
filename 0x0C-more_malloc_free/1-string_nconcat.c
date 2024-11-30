@@ -12,16 +12,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(sizeof(char)*(i+n+1));
 	
 
+	if(s1 == NULL)
+                {
+                        ptr = "";
+                }
 	for(i = 0; s1[i] != '\0'; i++)
 	{
-		if(s1 == NULL)
-		{
-			ptr = "";
-		}
-		else
-		{
-			ptr[i] = s1[i];
-		}
+		
+		ptr[i] = s1[i];
+		
 	}
 	for (k = 0; s2[k] != '\0'; k++);
 	if(s2 == NULL)
