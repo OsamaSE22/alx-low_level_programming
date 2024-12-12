@@ -6,7 +6,7 @@ int *array_range(int min, int max)
 {
 
 	int *ptr;
-	unsigned int i;
+	int i;
 	int c;
 
 	if(min > max)
@@ -19,7 +19,7 @@ int *array_range(int min, int max)
         if(ptr == NULL)
                 return NULL;
 
-	for(c = 0; c <= max; c++)
+	for(c = 0; c <= max - min; c++)
 	{
 		ptr[c] = c + min;
 	}
