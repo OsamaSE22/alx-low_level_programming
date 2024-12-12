@@ -4,14 +4,15 @@
 
 int *array_range(int min, int max)
 {
+
 	int *ptr;
 	int i;
 	int c;
 
-	i = max - min +1;
-
 	if(min > max)
                 return NULL;
+
+	i = max - min +1;
 
 	ptr = malloc(i * sizeof(int));
 
