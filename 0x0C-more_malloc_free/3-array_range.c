@@ -6,13 +6,13 @@ int *array_range(int min, int max)
 {
 
 	int *ptr;
-	int i;
+	unsigned int i;
 	int c;
 
 	if(min > max)
                 return NULL;
 
-	i = max - min +1;
+	i = max - min + 1;
 
 	ptr = malloc(i * sizeof(int));
 
