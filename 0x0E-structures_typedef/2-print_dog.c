@@ -2,14 +2,17 @@
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * print_dog -  is a function that prints the member of structures
+ * @d: a pointer to the structure to print it out
+ */
 void print_dog(struct dog *d)
 {
-	if(d == NULL)
+	if (d == NULL)
 	{
 		return;
 	}
-	
-	if(d->name == NULL)
+	if (d->name == NULL)
 	{
 		printf("Name: (nil)\n");
 	}
@@ -19,7 +22,7 @@ void print_dog(struct dog *d)
 	}
 	printf("Age: %.6f\n", d->age);
 
-	if(d->owner == NULL)
+	if (d->owner == NULL)
 	{
 		printf("Owner: (nil)\n");
 	}
