@@ -1,8 +1,5 @@
-#ifndef FPTR
-#define FPTR
 #include "function_pointers.h"
 #include <stddef.h>
-#endif
 
 /**
  * print_name - Calls a function to print a name.
