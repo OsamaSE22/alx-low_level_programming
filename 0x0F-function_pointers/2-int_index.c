@@ -9,9 +9,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 		k =-1;
 	for (i = 0; i < size; i++)
 	{
-		if (array == NULL)
+		if (array == NULL || cmp == NULL)
 		{
 			k = -1;
+			break;
 		}
 		else
 		{
