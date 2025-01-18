@@ -5,7 +5,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i,k;
 
-	if (size <= 0 || array == NULL || cmp == NULL)
+	if (array == NULL)
 		k =-1;
 
 	for (i = 0; i < size; i++)
