@@ -3,27 +3,17 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i,k;
+	int i;
 
-	if (size <= 0)
-		k =-1;
+	if (size <= 0 || array ==NULL || cmp == NULL)
+		return (-1);
+
 	for (i = 0; i < size; i++)
 	{
-		if (array == NULL || cmp == NULL)
+		if (cmp(array[i]) != 0)
 		{
-			k = -1;
-			break;
+			return i;
 		}
-		else
-		{
-			if (cmp(array[i]) != 0)
-			{
-				k = i;
-				break;
-			}
-		}
-	if(cmp(array[i]) == 0)
-		k = -1;
 	}
-	return k;
+	return -1;
 }
