@@ -23,10 +23,7 @@ int (*get_op_func(char *s))(int, int)
 		{
 			return ops[i].f;
 		}
-		if (strcmp(ops[i].op, s) != 0)
-		{
 			i++;
-		}
 	}
 	printf("Error\n");
 	exit(99);
