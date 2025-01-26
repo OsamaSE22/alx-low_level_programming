@@ -33,7 +33,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%d", num);
 			}
 		}
-		else if (i + 1 != n && separator == NULL)
+		else if (i <= n && separator == NULL)
 		{
 			num = va_arg(args, int);
 			printf("%d", num);
