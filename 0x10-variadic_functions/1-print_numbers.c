@@ -29,20 +29,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (i + 1 != n)
 			{
 				num = va_arg(args, int);
-				if (separator != NULL && i < n-1)
-				{
-					printf("%d%s", num, separator);
-				}
-				else
-				{
-					printf("%d", num);
-				}
+				printf("%d%s", num, separator);
 			}
 			else
 			{
 				num = va_arg(args, int);
 				printf("%d", num);
 			}
+		}
+		else if (i + 1 != n && separator == NULL)
+		{
+			num = va_arg(args, int);
+			printf("%d", num);
 		}
 	}
 	printf("\n");
