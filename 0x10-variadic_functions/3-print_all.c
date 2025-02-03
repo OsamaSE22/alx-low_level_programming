@@ -9,7 +9,9 @@ void print_all(const char * const format, ...)
 	int i;
 	char c;
 	int in;
+	float f;
 	char *s;
+	char *separator = "";
 
 	if(format == NULL)
 		return;
@@ -18,21 +20,31 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while(format[i] != '\0')
 	{
-		if (format[i] == 'c')
+		switch(format[i])
 		{
-			c = va_arg(args, int);
-			printf("%c, ", c);
-		}
-		else if(format[i] == 'i')
-		{
-			in = va_arg(args, int);
-			printf("%d, ", in);
-		}
-		else if(format[i] == 's')
-		{
+			case 'c';
+				c = va_arg(args, int);
+				printf("%s%c", separator, c);
+				break;
+			case 'i';
+				in = va_arg(args, int);
+				printf("%s%d", separator, in);
+				break;
+			case 'f';
+				f = (float) va_arg(args, double);
+				printf("%s%f", separator, f);
+				break;
+			case 's';
 				s = va_arg(args, char *);
-				printf("%s", s);
+				if (s == NULL)
+					s = "(nil)";
+				printf("%s%s", separator, s);
+				break;
+			default:
+				i++;
+				continue;
 		}
+		separator = ", ";
 		i++;
 	}
 	va_end(args);
