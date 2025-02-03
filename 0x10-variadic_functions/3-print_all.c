@@ -3,6 +3,12 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_all - print any arguemnt passed
+ * @format: the format specifier of the argument or parameter
+ *
+ * Return: nothing.
+ */
 void print_all(const char * const format, ...)
 {
 	va_list args;
@@ -13,14 +19,17 @@ void print_all(const char * const format, ...)
 	char *s;
 	char *separator = "";
 
-	if(format == NULL)
+	if (format == NULL)
+	{
+		printf("\n");
 		return;
+	}
 
 	i = 0;
 	va_start(args, format);
-	while(format[i] != '\0')
+	while (format[i] != '\0')
 	{
-		switch(format[i])
+		switch (format[i])
 		{
 			case 'c':
 				c = va_arg(args, int);
