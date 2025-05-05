@@ -14,6 +14,10 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int total = 0;
 	int decval = 1;
 
+	if (b == NULL)
+	{
+		return (0);
+	}
 	for (slen = 0; b[slen] != '\0'; slen++)
 	{
 	}
