@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -11,11 +10,13 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
-
-	int slen = strlen(b);
+	int slen;
 	unsigned int total = 0;
 	int decval = 1;
 
+	for (slen = 0; b[slen] != '\0'; slen++)
+	{
+	}
 	for (i = (slen - 1); i >= 0; i--)
 	{
 		if (b[i] != '1' && b[i] != '0')
