@@ -2,6 +2,12 @@
 #include <string.h>
 #include "main.h"
 
+/**
+ * binary_to_uint - convert binary to decimal.
+ * @b: the string to be converted.
+ *
+ * Return: the number in decimal.
+ */
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
@@ -16,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		if (b[i] == '1') 
+		if (b[i] == '1')
 		{
 			total += decval;
 		}
