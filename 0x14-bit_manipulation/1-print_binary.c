@@ -2,39 +2,12 @@
 #include "main.h"
 
 /**
- * print_binary - convert the decimal to binary.
- * @n: the number to be converted.
- *
- * Return: void.
+ * print_binary - Prints the binary representation of a number.
+ * @n: The number to print in binary.
  */
 void print_binary(unsigned long int n)
 {
-	int middle, i;
-	int length = 0;
-	char binary[256];
-	char temp;
-
-	do
-	{
-		if(n % 2 == 0) 
-		{
-			binary[length] = '0';
-		}
-		else
-		{
-			binary[length] = '1';
-		}
-		n /=2;
-		length++;
-	} while (n != 0);
-	binary[length] = '\0';
-	
-	middle = length / 2;
-	for (i = 0; i < middle; i++)
-	{
-		temp = binary[i];
-		binary[i] = binary[length - i - 1];
-		binary[length - i - 1] = temp;
-	}
-	printf("%s", binary);
+	if (n > 1)
+	print_binary(n >> 1);
+	_putchar('0' + (n & 1));
 }
