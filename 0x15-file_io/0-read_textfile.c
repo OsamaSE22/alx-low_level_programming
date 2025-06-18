@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	fd = open(filename, O_RDWR);
+	fd = open(filename, O_RDONLY);
 	if (fd < 0)
 	{
 		return (0);
@@ -37,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buf[sz] = '\0';
 
-	written = write(STDOUT_FILENO, buf, letters);
+	written = write(STDOUT_FILENO, buf, sz);
 	if (written == -1 || written != sz)
 	{
 		free(buf);
