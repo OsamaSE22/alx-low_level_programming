@@ -49,12 +49,12 @@ void cp(int argc, char *argv[])
 	}
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, " Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	if (close(fd2) == -1)
 	{
-		dprintf(STDERR_FILENO, " Error: Can't close fd %d\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 
