@@ -7,7 +7,7 @@
  * print_dlistint - traverse through dlist and print it.
  * @h: the head pointing to the first node.
  *
- * return: count - the number of nodes
+ * Return: size_t count - the number of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
 {
